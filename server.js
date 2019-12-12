@@ -8,7 +8,7 @@ app.get('/', function(req,res) {
   res.sendfile('public/index.html');
 });
 
-app.get('/', function(req,res) {
+app.get('/owner', function(req,res) {
   res.json({
     message: "welcome to Beth Frasers harry potter API",
     cohort: process.env.LAMBDA_COHORT,
