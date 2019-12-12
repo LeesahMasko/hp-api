@@ -10,6 +10,7 @@ app.get('/', function(req,res) {
 
 app.get('/', function(req,res) {
   res.json({
+    message: "welcome to Beth Frasers harry potter API",
     cohort: process.env.LAMBDA_COHORT,
     secret: process.env.SUPER_SECRET
   })
