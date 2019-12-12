@@ -7,7 +7,7 @@ var CHARACTERS_JSON = path.join(__dirname, 'data/characters.json');
 app.get('/', function(req,res) {
   res.sendfile('public/index.html');
 });
-
+// .env is working
 app.get('/owner', function(req,res) {
   res.json({
     message: "welcome to Beth Frasers harry potter API",
