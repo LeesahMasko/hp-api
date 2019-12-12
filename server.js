@@ -8,6 +8,13 @@ app.get('/', function(req,res) {
   res.sendfile('public/index.html');
 });
 
+app.get('/', function(req,res) {
+  res.json({
+    cohort: process.env.LAMBDA_COHORT,
+    secret: process.env.SUPER_SECRET
+  })
+});
+
 app.get('/api/characters', function(req, res){
   fs.readFile(CHARACTERS_JSON, function(err, data){
     if(err) process.exit(1);
